@@ -10,10 +10,9 @@ function getUsersNamesInAgeRange(users, gender) {
     if (userFilter.length === 0) {
         return 0;
     }
-    const ages = userFilter.map(users => users.age);
-    const totalAges = ages.reduce((sum, age) => sum + age, 0);
-    const averageAge = totalAges / userFilter.length;
-    return averageAge;
+
+    const totalAges = userFilter.reduce((acc, curr) => acc + curr.age, 0);
+    return totalAges / userFilter.length;
 
 
 }
